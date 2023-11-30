@@ -8,3 +8,7 @@ class LoginView(View):
 class RegisterView(View):
     def get(self, request):
         return render(request, "page-user-register.html")
+
+class Kod_Tasdiqlash(View):
+    def get(self, request):
+        return render(request, "kod_tasdiqlash.html")
