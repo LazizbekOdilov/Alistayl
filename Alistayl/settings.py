@@ -8,6 +8,9 @@ import environ
 env = environ.Env()
 environ.Env.read_env()
 
+ESKIZ_GMAIL = env("GMAIL")
+ESKIZ_PAROL = env("PAROL")
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/

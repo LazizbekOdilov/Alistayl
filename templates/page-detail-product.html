@@ -1,6 +1,6 @@
 {% extends 'header.html' %}
 
-{% block content %}
+{% block content %}1
 
 <section class="py-3 bg-light">
   <div class="container">
@@ -23,7 +23,7 @@
 <div class="card">
 <article class="gallery-wrap"> 
 	<div class="img-big-wrap">
-	  <div> <a href="#"><img src="{{ mahsulot.media_set.first.rasm.url }}"></a></div>
+	  <div> <a href="/asosiy/mahsulot/{{mahsulot.id}}/"><img src="{{ mahsulot.media_set.first.rasm.url }}"></a></div>
 	</div> <!-- slider-product.// -->
 	<div class="thumbs-wrap">
 	    {% for media in mahsulot.media_set.all|slice:"1:6" %}
@@ -40,7 +40,7 @@
 
 <div class="rating-wrap my-3">
 	<ul class="rating-stars">
-		<li style="width:80%" class="stars-active"> 
+		<li style="width:{{ortachasi}}%" class="stars-active">
 			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
 			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
 			<i class="fa fa-star"></i> 
@@ -51,7 +51,7 @@
 			<i class="fa fa-star"></i> 
 		</li>
 	</ul>
-	<small class="label-rating text-muted">132 reviews</small>
+	<small class="label-rating text-muted">{{ mahsulot.izoh_set.count }} reviews</small>
 	<small class="label-rating text-success"> <i class="fa fa-clipboard-check"></i> 154 orders </small>
 </div> <!-- rating-wrap.// -->
 
